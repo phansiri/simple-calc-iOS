@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         case Mod = "%"
         case Empty = ""
         case Clear = "Clear"
+        case Count = "Count"
+        case Average = "Avg"
+        case Fact = "Fact"
     }
     
     var valOne = ""
@@ -29,6 +32,7 @@ class ViewController: UIViewController {
     var tempStoredNumber = ""
     var result = ""
     var currentOperation = Operation.Empty
+    var countFunction: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +75,11 @@ class ViewController: UIViewController {
         performOperation(operation: currentOperation)
     }
     
+    @IBAction func countButton(sender: AnyObject) {
+        performOperation(operation: Operation.Count)
+    }
+    
+    
     @IBAction func clearButton(sender: AnyObject) {
         valOne = ""
         valTwo = ""
@@ -78,10 +87,10 @@ class ViewController: UIViewController {
         result = ""
         currentOperation = Operation.Empty
         outputLabel.text = "0"
+        countFunction = 1
         
     }
-    
-    
+
     func performOperation(operation: Operation) {
         if currentOperation != Operation.Empty { // test if current operation is not empty, that means there is a value in valOne
             if tempStoredNumber != "" { // test if tempStoreNumber is not empty, that means there is a value in tempStoreNmber so add it to valTwo
@@ -99,6 +108,9 @@ class ViewController: UIViewController {
                     result = "\(Double(valOne)! + Double(valTwo)!)"
                 } else if currentOperation == .Mod {
                     result = "\(Int(valOne)! % Int(valTwo)!)"
+                } else if currentOperation == .Count {
+                    countFunction += 1
+                    result = String(countFunction)
                 }
                 
                 // results is added to valOne for current running number
@@ -110,6 +122,7 @@ class ViewController: UIViewController {
             valOne = tempStoredNumber
             tempStoredNumber = ""
             currentOperation = operation
+
         }
     }
 
