@@ -32,7 +32,8 @@ class ViewController: UIViewController {
     var tempStoredNumber = ""
     var result = ""
     var currentOperation = Operation.Empty
-    var countFunction: Int = 0
+    var countFunction: Int = 1
+    var averageFunction: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +80,18 @@ class ViewController: UIViewController {
         performOperation(operation: Operation.Count)
     }
     
+    @IBAction func factButton(sender: AnyObject) {
+        let factorialNumber = Int(tempStoredNumber)!
+        for index in 1...factorialNumber {
+            averageFunction *= index
+        }
+        result = "\(averageFunction)"
+        outputLabel.text = result
+    }
+    
+    @IBAction func avgerageButton(sender: AnyObject) {
+        
+    }
     
     @IBAction func clearButton(sender: AnyObject) {
         valOne = ""
@@ -88,6 +101,7 @@ class ViewController: UIViewController {
         currentOperation = Operation.Empty
         outputLabel.text = "0"
         countFunction = 1
+        averageFunction = 1
         
     }
 
@@ -112,7 +126,6 @@ class ViewController: UIViewController {
                     countFunction += 1
                     result = String(countFunction)
                 }
-                
                 // results is added to valOne for current running number
                 valOne = result
                 outputLabel.text = result
@@ -122,7 +135,6 @@ class ViewController: UIViewController {
             valOne = tempStoredNumber
             tempStoredNumber = ""
             currentOperation = operation
-
         }
     }
 
