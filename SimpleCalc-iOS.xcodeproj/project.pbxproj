@@ -512,6 +512,7 @@
 				0C933D671DB9A83C0034F098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C933D681DB9A83C0034F098 /* Build configuration list for PBXNativeTarget "SimpleCalc-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +521,7 @@
 				0C933D6A1DB9A83C0034F098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C933D6B1DB9A83C0034F098 /* Build configuration list for PBXNativeTarget "SimpleCalc-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +530,7 @@
 				0C933D6D1DB9A83C0034F098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
