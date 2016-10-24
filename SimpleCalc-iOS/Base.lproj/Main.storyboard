@@ -33,6 +33,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2W8-Rc-H7H">
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <state key="normal" title="Avg"/>
+                                                <connections>
+                                                    <action selector="avgerageButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0t-RI-efZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQL-4X-6cP">
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>

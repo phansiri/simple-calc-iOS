@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     var currentOperation = Operation.Empty
     var countFunction: Int = 1
     var averageFunction: Int = 1
+    var numberArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,15 +83,26 @@ class ViewController: UIViewController {
     
     @IBAction func factButton(sender: AnyObject) {
         let factorialNumber = Int(tempStoredNumber)!
-        for index in 1...factorialNumber {
-            averageFunction *= index
+        if factorialNumber == 0 {
+            result = "1"
+            
+        } else {
+            for index in 1...factorialNumber {
+                averageFunction *= index
+            }
+            result = "\(averageFunction)"
         }
-        result = "\(averageFunction)"
         outputLabel.text = result
+
     }
     
     @IBAction func avgerageButton(sender: AnyObject) {
-        
+        numberArray.append(tempStoredNumber)
+        valOne = tempStoredNumber
+        valTwo = tempStoredNumber
+        tempStoredNumber = ""
+        currentOperation = Operation.Average
+
     }
     
     @IBAction func clearButton(sender: AnyObject) {
@@ -102,6 +114,7 @@ class ViewController: UIViewController {
         outputLabel.text = "0"
         countFunction = 1
         averageFunction = 1
+        numberArray = [String]()
         
     }
 
@@ -125,6 +138,14 @@ class ViewController: UIViewController {
                 } else if currentOperation == .Count {
                     countFunction += 1
                     result = String(countFunction)
+                } else if currentOperation == .Average {
+                    numberArray.append(valTwo)
+                    print(numberArray)
+                    var sum = 0
+                    for index in numberArray {
+                        sum += Int(index)!
+                    }
+                    result = "\(sum / numberArray.count)"
                 }
                 // results is added to valOne for current running number
                 valOne = result
