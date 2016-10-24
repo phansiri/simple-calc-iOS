@@ -34,7 +34,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                 <state key="normal" title="Avg"/>
                                                 <connections>
-                                                    <action selector="avgerageButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0t-RI-efZ"/>
+                                                    <action selector="averageButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ef3-8E-OAq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQL-4X-6cP">

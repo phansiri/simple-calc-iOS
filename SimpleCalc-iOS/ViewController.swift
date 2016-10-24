@@ -140,7 +140,7 @@ class ViewController: UIViewController {
                     result = String(countFunction)
                 } else if currentOperation == .Average {
                     numberArray.append(valTwo)
-                    print(numberArray)
+//                    print(numberArray)
                     var sum = 0
                     for index in numberArray {
                         sum += Int(index)!
