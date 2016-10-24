@@ -96,7 +96,7 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func avgerageButton(sender: AnyObject) {
+    @IBAction func averageButton(sender: AnyObject) {
         numberArray.append(tempStoredNumber)
         valOne = tempStoredNumber
         valTwo = tempStoredNumber
